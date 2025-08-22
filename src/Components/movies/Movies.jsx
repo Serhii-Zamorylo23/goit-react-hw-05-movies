@@ -1,6 +1,14 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const StyledInput=styled.input`
+  &:focus {
+    border-color: #2020dc;
+    outline: none; 
+  }
+`
 const Movies = () => {
   const [value, setValue] = useState();
   const [FilteredFilms, SetFilteredFilms] = useState([]);
@@ -19,7 +27,7 @@ const Movies = () => {
   return (
     <>
       <form onSubmit={valueInput}>
-        <input name="nameFilmInput" type="text" />
+        <StyledInput name="nameFilmInput" type="text" />
         <button type="submit">Search</button>
       </form>
 
