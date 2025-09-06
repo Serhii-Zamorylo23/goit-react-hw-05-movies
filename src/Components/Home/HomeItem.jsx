@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const TrendsItem=({Title})=>{
+const HomeItem=({Title})=>{
 
     return(
         <li><Link>{Title}   </Link></li>
     )
 }
-export default TrendsItem 
+export default HomeItem 

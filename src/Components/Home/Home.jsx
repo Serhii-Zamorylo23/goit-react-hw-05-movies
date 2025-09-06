@@ -1,7 +1,7 @@
 import React from "react";
-import TrendsItem from "./TrendsItem";
+import HomeItem from "./HomeItem";
 import { useState,useEffect} from "react";
-const Trends=()=>{
+const Home=()=>{
     const [films,setFilms]=useState([])
     const key="e6929b7a198796c685bba2ed737fc948"
     useEffect(()=>{
@@ -15,11 +15,11 @@ const Trends=()=>{
         <ul>
             {
                 films.map(film =>(
-                    <TrendsItem Title={film.title ||film.name} />
+                    <HomeItem Title={film.title ||film.name} />
                 ))
             }
         </ul>
         </>
     )
 }
-export default Trends
+export default Home
