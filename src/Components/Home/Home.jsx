@@ -15,7 +15,7 @@ const Home=()=>{
         <ul>
             {
                 films.map(film =>(
-                    <HomeItem Title={film.title ||film.name} />
+                    <HomeItem Title={film.title ||film.name} FilmId={film.id} />
                 ))
             }
         </ul>

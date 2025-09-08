@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-
+import MovieDetails from "../MovieDetails/MovieDetails";
 const StyledInput=styled.input`
   &:focus {
     border-color: #2020dc;
@@ -34,8 +34,8 @@ const Movies = () => {
       <ul>
         {
             FilteredFilms.map((FilteredFilm)=>(
-                <li>
-                    <Link>{FilteredFilm.title || FilteredFilm.name}</Link>
+                <li onClick={()=><MovieDetails/>}>
+                    <Link to={`/movies/${FilteredFilm.id}`}>{FilteredFilm.title || FilteredFilm.name}</Link>
                 </li>
             ))
         }

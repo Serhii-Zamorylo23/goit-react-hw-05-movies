@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const HomeItem=({Title})=>{
+import MovieDetails from "../MovieDetails/MovieDetails";
+const HomeItem=({Title,FilmId})=>{
 
     return(
-        <li><Link>{Title}   </Link></li>
+        <li onClick={()=><MovieDetails/>}>
+            <Link to={`/movies/${FilmId}`}>{Title}</Link>
+        </li>
     )
 }
 export default HomeItem 
